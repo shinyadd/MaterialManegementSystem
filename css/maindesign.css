@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/* 左側を固定 */
+
+BODY {
+	margin: 0;
+	padding: 0px 0px 0px 300px ;
+	width:1300px;
+}
+
+* html body{
+overflow: auto;
+background-color : #aaff66 ;
+}
+
+div#Left_area {
+
+position: fixed !important;
+position: absolute;
+top: 0;
+left: 0;
+width: 300px;
+/* BODY で設定した150ピクセルの値をセットします　*/
+height: 100%;
+background-color : white ;
+overflow: auto;
+/* メニュー等の行が多い場合はスクロールバーを表示する */
+border-right: solid black;
+}
+
+
+div#Main_area{
+	position: fixed !important;
+	position: absolute;
+	height: 100%;
+	overflow: auto;
+	background-color:#e8e8e8;
+}
+
+/* **********左メニューの画像の位置************* */
+
+.dynawave {
+  	display: inline;/* 文章の流れの中に置いている画像なので inline でも良いが今回は inline-block が適当 */
+  	position: relative; /* 通常の文章の流れにある要素なので relative が適切 */
+	top: 20px; /* 下に 10px 下げる */
+}
+
+
+
+    .btn-square {
+        display: inline-block;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        background: #668ad8;/*ボタン色*/
+        color: #FFF;
+        border-bottom: solid 4px #627295;
+        border-radius: 3px;
+    }
+
+    /* **********検索ボックスの「検索」ボタンの装飾*************** */
+    .btn-square-register {
+        display: inline-block;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        background: #668ad8;/*ボタン色*/
+        color: #FFF;
+        border-bottom: solid 4px #627295;
+        border-radius: 3px;
+    }
+
+    .btn-square-register:active {
+        /*ボタンを押したとき*/
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);/*下に動く*/
+        border-bottom: none;/*線を消す*/
+     }
+
+     /* **********検索ボックスのテーブルの線の有無とセルの中身の位置*************** */
+	/* すべての線を表示
+	   セルの中身　中央寄せ*/
+	.td-css {
+    	border: 1px solid black;
+    	text-align: center;
+	}
+
+	/* 検索ボタン、更新ボタンの周りの線を消す
+	   上下左右すべての線を非表示
+	   セルの中身　右寄せ*/
+	.th-css13 {
+    	border: none;
+    	text-align: right;
+	}
+
+	/* **********検索結果のテーブルのセル内の設定*************** */
+	.th-result {
+		text-align: center;
+	}
+
+	.td-result{
+		text-align: center;
+	}
+
+	/* **********更新確認モーダルのテーブルのセル内の設定*************** */
+	.th-modal {
+		text-align: center;
+		font-size: medium;
+	}
+
+	.td-modal-db{
+		text-align: center;
+		font-size: medium;
+	}
+
+	.td-modal-up{
+		text-align: center;
+		font-size: large;
+		font-weight: bold;
+	}
